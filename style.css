@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1f1f22;
+    font-family: "Roboto", sans-serif;
+    overflow: hidden;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+}
+.container h1{
+    margin-bottom: 30px;
+    color: #eee;
+}
+.container .sub-title{
+    color: #ff0000;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container .content{
+    width: 300px;
+    height: 500px;
+    background-color: #161616;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 3px 4px 10px #0000005d;
+}
+.container .content .layout{
+    background-color: #2b2b30;
+    width: 90%;
+    height: 110px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.container .content .layout p{
+    color: #eee;
+    margin-right: 40px;
+    font-size: 45px;
+}
+
+.container .content .numbers{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%);
+    gap: 5px;
+
+}
+.container .content .numbers button{
+    width: 60px;
+    height: 60px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    font-size: 30px;
+    background-color: #eee;
+}
+
+.container .content .numbers button:hover{
+    background-color: #00ff88;
+}
+
+.container .content .numbers button.symbol{
+    background-color: #8b8b8b;
+    color: #000;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.397);
+}
+
+.container .content .numbers #back{
+    background-color: #ff7575;
+}
+.container .content .numbers #back:hover{
+    background-color: #d9ff00;
+}
+
+.container .content .numbers button.symbol:hover{
+    background-color: #d9ff00;
+}

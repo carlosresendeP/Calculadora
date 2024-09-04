@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <main class="container">
+        <h1>Calculadora</h1>
+        <p class="sub-title">Essa calculadora ainda NÃO está 100% funcional</p>
+        <section class="content">
+            <div class="layout">
+                <p id="result"></p>
+            </div>
+
+            <div class="numbers">
+                <button id="clear" class="symbol" onclick="Clean()">c</button>
+                <button id="parentheses" class="symbol"onclick="addValue('()')">()</button>
+                <button id="percentage" class="symbol" onclick="addValue('%')">%</button>
+                <button id="division" class="symbol" onclick="addValue('/')">÷</button>
+
+                <button id="number9" class="number" onclick="addValue('9')">9</button>
+                <button id="number8" class="number" onclick="addValue('8')" >8</button>
+                <button id="number7" class="number" onclick="addValue('7')">7</button>
+                <button id="multiplication" class="symbol" onclick="addValue('*')">x</button>
+
+                <button id="number6" class="number" onclick="addValue('6')">6</button>
+                <button id="number5" class="number" onclick="addValue('5')">5</button>
+                <button id="number4" class="number" onclick="addValue('4')">4</button>
+                <button id="subtraction" class="symbol" onclick="addValue('-')">-</button>
+
+                <button id="number3" class="number" onclick="addValue('3')">3</button>
+                <button id="number2" class="number" onclick="addValue('2')">2</button>
+                <button id="number1" class="number" onclick="addValue('1')">1</button>
+                <button id="sum" class="symbol" onclick="addValue('+')">+</button>
+
+                <button id="back" class="symbol" onclick="back()"><</button>
+                <button id="number0" onclick="addValue(0)" >0</button>
+                <button id="," class="symbol" onclick="addValue('.')">.</button>
+                <button id="equals" class="symbol egual" onclick="calculate()">=</button>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
