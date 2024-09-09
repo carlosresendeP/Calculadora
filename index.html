@@ -3,24 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style-theme2.css" id="theme-2">
+    
+    <link rel="stylesheet" href="style.css" id="theme-1S">
+
+    
     <title>Calculadora</title>
 </head>
 <body>
     <header>
-
+        <div class="header-text">
+            <h1>Calc</h1>
+            <div class="header-buttons-theme">
+                <span>Theme:</span>
+                <button class="button-theme select" ></button>
+                <button class="button-theme" ></button>
+                <button class="button-theme" ></button>
+            </div>
+        </div>
     </header>
 
     <main class="container">
-        <h1>Calculadora</h1>
         <p class="sub-title">Essa calculadora ainda NÃO está 100% funcional</p>
+        
         <section class="content">
+            
             <div class="layout">
                 <p id="result"></p>
             </div>
 
             <div class="numbers">
-                <button id="clear" class="symbol" onclick="Clean()">c</button>
+                <button id="clear" class="symbol" onclick="Clean()">C</button>
                 <button id="parentheses" class="symbol"onclick="addValue('()')">()</button>
                 <button id="percentage" class="symbol" onclick="addValue('%')">%</button>
                 <button id="division" class="symbol" onclick="addValue('/')">÷</button>
@@ -49,4 +63,5 @@
     </main>
 </body>
 <script src="script.js"></script>
+<script src="Themes.js"></script>
 </html>

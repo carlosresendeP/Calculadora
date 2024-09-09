@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
     margin: 0;
@@ -6,47 +6,105 @@
     box-sizing: border-box;
 }
 
+:root{
+    --corWhite: #eee;
+    --corblack: #000;
+    --shawdownText: 2px 3px 5px rgba(0, 0, 0, 0.397);
+    --corButtons: #faebd7;
+    --corbackground: #72728a;
+    --corBackspace:#ff1e00;
+    --corselect: #00ff88;
+    --contentColor:#161616;
+    --LayoutColor: #2b2b30;
+
+}
 body{
-    background-color: #1f1f22;
-    font-family: "Roboto", sans-serif;
+    background-color: var(--corbackground);
+    font-family: "Poppins", sans-serif;
     overflow: hidden;
 }
 
 header{
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
     height: auto;
     width: 100%;
+    z-index: 10;
 }
-.container h1{
-    margin-bottom: 30px;
-    color: #eee;
+
+header .header-text{
+    display: flex;
+    gap: 150px;
+    margin-top: 20px;
 }
-.container .sub-title{
-    color: #ff0000;
-    margin-bottom: 10px;
-    opacity: 0.8;
-}
-.container{
+
+.header-buttons-theme{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 5px;
+}
+
+
+header .header-text .button-theme{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    outline: none;
+    border-bottom: var(--corWhite);
+}
+
+
+header .header-text .button-theme.select{
+    background-color: #0f0f0f;
+    border: 2.4px solid var(--corWhite);
+}
+
+header .header-text .header-buttons-theme span{
+    margin-right: 5px;
+    color: var(--corWhite);
+    font-weight: 500;
+}
+
+
+
+header h1{
+    color: var(--corWhite);
+    font-size: 24px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
     flex-direction: column;
     width: 100vw;
     height: 100vh;
 }
 
+
 .container .content{
-    width: 300px;
+    width: 340px;
     height: 500px;
-    background-color: #161616;
+    background-color: var(--contentColor);
     border-radius: 10px;
     position: relative;
-    box-shadow: 3px 4px 10px #0000005d;
+    box-shadow: var(--shawdownText);
+}
+
+.container .sub-title{
+    color: var(--corBackspace);
+    margin-bottom: 10px;
+    opacity: 0.8;
+    font-weight: 800;
+    display: none;
+
 }
 .container .content .layout{
-    background-color: #2b2b30;
+    background-color: var(--LayoutColor);
     width: 90%;
     height: 110px;
     margin: auto;
@@ -55,11 +113,14 @@ header{
     display: flex;
     align-items: center;
     justify-content: right;
+    z-index: 2;
 }
 .container .content .layout p{
-    color: #eee;
+    color: var(--corWhite);
     margin-right: 40px;
     font-size: 45px;
+    font-weight: 600;
+    
 }
 
 .container .content .numbers{
@@ -69,36 +130,44 @@ header{
     bottom: 3%;
     left: 50%;
     transform: translate(-50%);
-    gap: 5px;
+    gap: 10px;
+    
 
 }
 .container .content .numbers button{
-    width: 60px;
+    width: 70px;
     height: 60px;
     border: none;
     outline: none;
-    border-radius: 50%;
+    border-radius: 10%;
     font-size: 30px;
-    background-color: #eee;
+    background-color: var(--corButtons);
+    font-weight: 600;
+    color: var(--corblack);
 }
 
-.container .content .numbers button:hover{
-    background-color: #00ff88;
+.container .content .numbers button#clear{
+    background-color: var(--corbackground);
+    color: var(--corWhite);
 }
+
 
 .container .content .numbers button.symbol{
-    background-color: #8b8b8b;
-    color: #000;
-    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.397);
+    background-color: #faebd7;
+    color: var(--corblack);
+    text-shadow: var(--shawdownText);
 }
+
+.container .content .numbers button:hover, .symbol:hover{
+    background-color: var(--corselect);
+}
+
+
 
 .container .content .numbers #back{
-    background-color: #ff7575;
+    background-color: var(--corBackspace);
 }
 .container .content .numbers #back:hover{
-    background-color: #d9ff00;
+    background-color: var(--corselect);
 }
 
-.container .content .numbers button.symbol:hover{
-    background-color: #d9ff00;
-}
